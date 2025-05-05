@@ -1,0 +1,50 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type LocationInfo {
+  name: String!
+  country: String!
+  localTime: String!
+}
+
+type CurrentWeather {
+  temperature: Float!
+  feelsLike: Float!
+  condition: String!
+  humidity: Float!
+  uv: Float!
+  pressure: Float!
+  windSpeed: Float!
+  sunset: String!
+  sunrise: String!
+}
+
+type DailyForecast {
+  date: String!
+  maxTemp: Float!
+  condition: String!
+}
+
+type HourlyForecast {
+  time: String!
+  temperature: Float!
+  condition: String!
+  windSpeed: Float!
+  windDirection: String!
+}
+
+type Forecast {
+  daily: [DailyForecast!]!
+  hourly: [HourlyForecast!]!
+}
+
+type WeatherResponse {
+  location: LocationInfo!
+  current: CurrentWeather!
+  forecast: Forecast!
+}
+
+type Query {
+  getWeatherDetails(city: String): WeatherResponse!
+}
