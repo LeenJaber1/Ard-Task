@@ -17,6 +17,15 @@ A full-stack weather dashboard built with **NestJS**, **React**, **GraphQL**, an
 
 ---
 
+## 📂 Project Structure 
+
+📦 ard-task/
+
+├── 📂 ard-backend/              
+│   └── 📂 my-nest-ap/          
+├── 📂 ard-frontend/             
+│   └── 📂 ard-app/    
+
 ## 🚀 Features
 
 - User signup and login with JWT-based authentication.
@@ -62,3 +71,9 @@ A full-stack weather dashboard built with **NestJS**, **React**, **GraphQL**, an
 ```bash
 cd ard-backend/my-nest-ap
 docker build -t your-dockerhub-username/my-nest-backend .
+
+cd ard-frontend/ard-app
+docker build -t your-dockerhub-username/my-react-frontend .
+
+docker run -p 8080:8080 your-dockerhub-username/my-nest-backend
+docker run -p 3000:80 your-dockerhub-username/my-react-frontend
